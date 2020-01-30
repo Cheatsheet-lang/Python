@@ -17,3 +17,7 @@ $ python3                # Takes you to python3 shell
 ```python
 python3 <filename>.py                   # Running a python script
 ```
+
+```python 
+time python3 <filename>.py                  #Calculating the time of execution
+```
