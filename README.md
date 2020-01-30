@@ -60,3 +60,23 @@ else:
 ```
 Note that the colon (:) following <expr> is required.
 Similarly, the `nested if` also works.
+
+
+### Iterative statements
+As other programmin languages, we have 
+
++ `for loop`
+```python
+for i in range(5):
+  print(i)
+```
+The `range` function starts off with 0 till the number(excluded).
+
++ `while loop`
+```python
+i=0
+while(i<10):
+  print("{} is less than 10".format(i))
+  i+=1
+```
+`.format()` is a type of printing.
