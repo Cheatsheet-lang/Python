@@ -1,23 +1,25 @@
 # Python Cheatsheet
 
-Contains scripts and python cheatcodes
+### Basic and necessary commands needed to execute a well-defined python code at the command line.
 
-### General commands
 
-```python
-pip install <package-name>               # For installing any package in python2
-pip3 install <package-name>              # For installing any package in python3
-```
+### Opening a python shell.
 
 ```python
-$ python                 # Takes you to python2 shell
-$ python3                # Takes you to python3 shell
+python3               
 ```
 
+### Installing a package
 ```python
-python3 <filename>.py                   # Running a python script
+pip3 install <package-name>              
 ```
 
+### Running a python script
+```python
+python3 <filename>.py                   
+```
+
+### Calculating the time of execution
 ```python 
-time python3 <filename>.py                  #Calculating the time of execution
+time python3 <filename>.py                  
 ```
