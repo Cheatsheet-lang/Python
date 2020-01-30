@@ -23,3 +23,17 @@ python3 <filename>.py
 ```python 
 time python3 <filename>.py                  
 ```
+
+## Getting started with the language
+
+### I/O
++ Input
+```python
+input("Input: ")
+```
++ Output
+Python automatically points the cursor to a new line.
+We need not specify explicitly.
+```python
+print("Output")
+```
