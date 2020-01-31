@@ -6,7 +6,7 @@ if __name__ == '__main__':    # If file is not imported, this will be executed
     main()
 ```
 
-### Basic and necessary commands needed to execute a well-defined python code at the command line.
+## Basic and necessary commands needed to execute a well-defined python code at the command line.
 
 ### Opening a python shell.
 ```python
@@ -28,9 +28,14 @@ $ python3 <filename>.py
 $ time python3 <filename>.py                  
 ```
 
+### Importing a py script
+```python
+import <filename>.py
+```
+
 ## Getting started with the language
 
-### I/O
+### Basic I/O
 + Input
 ```python
 input("Input: ")
@@ -57,7 +62,7 @@ We write it after `:` followed by an indentation in the next line.
 The conditional statements include `if`, `if-else`, `nested if` and so on...
 ```python
 x,y = 0,1
-if x<y:
+if x < y:
   print("x is less than y)
 else:
   print("x is not less than y")
@@ -67,7 +72,7 @@ Similarly, the `nested if` also works.
 
 
 ### Iterative statements
-As other programmin languages, we have 
+As other programming languages, we have 
 
 + `for loop`
 ```python
@@ -79,9 +84,9 @@ The `range` function starts off with 0 till the number(excluded).
 + `while loop`
 ```python
 i=0
-while(i<10):
+while(i < 10):
   print("{} is less than 10".format(i))
-  i+=1
+  i += 1
 ```
 `.format()` is a type of printing.
 
@@ -89,5 +94,21 @@ while(i<10):
 
 ### List
 ```python
-<list> = <list>.append(<ele>)
+# These are all inplace operations returns a None value
+
+<list>.append(<ele>)            # Add an element to the end of the list
+<list>.sort()                   # Sorts the given list
+<list>.pop([<ele>])             # Removes the last element if no argument else removes the element at the index given
+<list>.clear()                  # Makes it an empty list
+<list>.insert(<index>, <ele>)   # Adds the element before the index
+<list>.extend(<iterator>)
+<list>.reverse()                # Reverse a given list
+```
+
+```python
+# These are not inplace operations and has a return value
+
+<list>.copy()                   # Makes a shallow copy of the list
+<list>.index(<ele>)             # Returns the index of the given element
+<list>.count(<ele>)             # Returns the number of occurrences of the element.
 ```
