@@ -1,10 +1,14 @@
 # Python Cheatsheet
 
+## Main
+```python
+if __name__ == '__main__':    # If file is not imported, this will be executed
+    main()
+```
+
 ### Basic and necessary commands needed to execute a well-defined python code at the command line.
 
-
 ### Opening a python shell.
-
 ```python
 $ python3               
 ```
@@ -80,3 +84,10 @@ while(i<10):
   i+=1
 ```
 `.format()` is a type of printing.
+
+## Data Structures
+
+### List
+```python
+<list> = <list>.append(<ele>)
+```
