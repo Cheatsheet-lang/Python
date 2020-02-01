@@ -92,7 +92,7 @@ while(i < 10):
 
 ## Data Structures
 
-### List
+### Lists
 ```python
 # These are all inplace operations returns a None value
 
@@ -110,5 +110,23 @@ while(i < 10):
 
 <list>.copy()                   # Makes a shallow copy of the list
 <list>.index(<ele>)             # Returns the index of the given element
-<list>.count(<ele>)             # Returns the number of occurrences of the element.
+<list>.count(<ele>)             # Returns the number of occurrences of the element
 ```
+### Dictionaries
+key-value pairs.
+```python
+newDict = {'Google':100, 'Facebook':80, 'Apple':90}
+
+newDict['Amazon'] = 85                  # Adding a key along with the value
+
+# Accessing the dictionary 
+for key in newDict:
+  print("{key} -> {x}".format(key=key, x=newDict[key]))
+  
+len(newDict)                # Find the length of the dictionary
+newDist.pop(<key>)              # Removes the item with the specified key name
+newDict.copy()              # Make a copy of a dictionary
+```
+A dictionary can also contain many dictionaries, this is called nested dictionaries.
+
+
