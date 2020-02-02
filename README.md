@@ -115,18 +115,29 @@ while(i < 10):
 ### Dictionaries
 key-value pairs.
 ```python
-newDict = {'Google':100, 'Facebook':80, 'Apple':90}
+<dict> = {'Google':100, 'Facebook':80, 'Apple':90}
 
-newDict['Amazon'] = 85                  # Adding a key along with the value
+<dict>['Amazon'] = 85                           # Adding a key along with the value
 
 # Accessing the dictionary 
-for key in newDict:
-  print("{key} -> {x}".format(key=key, x=newDict[key]))
+for key in <dict>:
+  print("{key} -> {x}".format(key=key, x=<dict>[key]))
   
-len(newDict)                # Find the length of the dictionary
-newDist.pop(<key>)              # Removes the item with the specified key name
-newDict.copy()              # Make a copy of a dictionary
+len(<dict>)                                     # Find the length of the dictionary
+<dict>.pop(<key>)                               # Removes the item with the specified key name
+<dict>.copy()                                   # Make a copy of a dictionary
 ```
 A dictionary can also contain many dictionaries, this is called nested dictionaries.
+
+## Third party libraries
+
+### NLTK
+```python
+import nltk
+
+# Before trying any function download the word list
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+```
 
 
