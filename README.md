@@ -122,7 +122,9 @@ key-value pairs.
 # Accessing the dictionary 
 for key in <dict>:
   print("{key} -> {x}".format(key=key, x=<dict>[key]))
-  
+ 
+<dict>.keys()                                   # Print all the keys
+<dict>.values()                                   # Print all the values
 len(<dict>)                                     # Find the length of the dictionary
 <dict>.pop(<key>)                               # Removes the item with the specified key name
 <dict>.copy()                                   # Make a copy of a dictionary
