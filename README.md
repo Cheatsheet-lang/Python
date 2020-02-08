@@ -124,7 +124,7 @@ for key in <dict>:
   print("{key} -> {x}".format(key=key, x=<dict>[key]))
  
 <dict>.keys()                                   # Print all the keys
-<dict>.values()                                   # Print all the values
+<dict>.values()                                 # Print all the values
 len(<dict>)                                     # Find the length of the dictionary
 <dict>.pop(<key>)                               # Removes the item with the specified key name
 <dict>.copy()                                   # Make a copy of a dictionary
@@ -133,7 +133,22 @@ A dictionary can also contain many dictionaries, this is called nested dictionar
 
 ## Third party libraries
 
+### Pandas
+```shell
+$ sudo pip3 install pandas          # Installing pandas module in Ubuntu
+```
+```python
+import pandas as pd
+
+<dataframe>.head([<n>])             # Display the first n rows of the Dataframe, default value is 5 rows
+<dataframe>.tail([<n>])             # Display the last n rows of the Dataframe, default value is 5 rows
+<dataframe>.info()                  # Gives some information like, row and column datatypes, non-null count, and memory usage
+<dataframe>.describe()              # Provides some descriptive statistics about the numerical rows in the dataframe
+```
 ### NLTK
+```shell
+$ sudo pip3 install nltk                    # Installing nltk module in Ubuntu
+```
 ```python
 import nltk
 
@@ -141,5 +156,3 @@ import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 ```
-
-
