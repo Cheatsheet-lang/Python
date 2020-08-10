@@ -30,7 +30,7 @@ $ time python3 <filename>.py
 
 ### Importing a py script
 ```python
-import <filename>.py
+import <filename>
 ```
 
 ## Getting started with the language
@@ -63,7 +63,7 @@ The conditional statements include `if`, `if-else`, `nested if` and so on...
 ```python
 x,y = 0,1
 if x < y:
-  print("x is less than y)
+  print("x is less than y")
 else:
   print("x is not less than y")
 ```
