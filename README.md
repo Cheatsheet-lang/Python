@@ -216,7 +216,7 @@ nltk.download('averaged_perceptron_tagger')
 
 ### Anagrams
 An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
-```
+```python
 from collections import Counter
 def anagram(first, second):
     return Counter(first) == Counter(second)
@@ -224,7 +224,7 @@ anagram("abcd3", "3acdb") # True
 ```
 ### Memory
 This snippet can be used to check the memory usage of an object.
-```
+```python
 import sys 
 
 variable = 30 
@@ -232,22 +232,34 @@ print(sys.getsizeof(variable)) # 24
 ```
 ### Print a string N times
 This snippet can be used to print a string n times without having to use loops to do it.
-```
+```python
 n = 2
 s ="Programming"
 print(s * n) # ProgrammingProgramming
 ```
 ### Chunk
 This method chunks a list into smaller lists of a specified size.
-```
+```python
 def chunk(list, size):
     return [list[i:i+size] for i in range(0,len(list), size)]
 ```
 ### Get vowels
 This method gets vowels (‘a’, ‘e’, ‘i’, ‘o’, ‘u’) found in a string.
-```
+```python
 def get_vowels(string):
     return [each for each in string if each in 'aeiou'] 
 get_vowels('foobar') # ['o', 'o', 'a']
 get_vowels('gym') # []
+```
+### Write to file
+This method takes in the ``name of file`` and ``content`` then write the content into the file. If the file doesn't exist then it creates the file.
+```python
+def write_to_file(filename, content):
+  try:
+    with open(filename, "w+") as f:
+      f.write(content)
+    print("Written to file successfully.")
+  except Exception as e:
+    print("Failed to write to file with error: ")
+    print(e)
 ```
