@@ -145,6 +145,39 @@ Available in Python 3.6+. Works similar to the above, but is more powerful as ar
 'Five plus ten is 15 and not 30.'
 ```
 
+## Function
+Function is a block of code which runs when it is called.  
+Functions are declared using the `def` keyword. Function name must be a valid identifier.  
+Function arguments can be literal values, variables (valid identifiers), and expressions.
+```python
+def sum(a, b) :
+	return a + b
+
+def subtract(a, b) :
+	return a - b
+
+def getPerson(name, age) :
+	person = { "name": name, "age": age }
+	return person
+```
+
+#### Function Call
+Functions can be called by passing the arguments according to the declaration.
+```python
+a = 20
+b = 50
+c = sum(a, b)
+d = sum(b, 50)
+e = subtract(b, a)
+p = getPerson("Joe", 25)
+
+# OUTPUT:
+print( "Sum - {} plus {}: {}" . format( a, b, c ) ) # Sum - 20 plus 50: 70
+print( "Sum - {} plus 50: {}" . format( b, d ) ) # Sum - 50 plus 50: 100
+print( "Subtraction - {} minus {}: {}" . format( b, a, e ) ) # Subtraction - 50 minus 20: 30
+print( "Person - {}" . format( p ) ) # Person - {'name': 'Joe', 'age': 75}
+```
+
 ## Data Structures
 
 ### Lists
@@ -186,8 +219,47 @@ len(<dict>)                                     # Find the length of the diction
 ```
 A dictionary can also contain many dictionaries, this is called nested dictionaries.
 
-## Third party libraries
+### Tuple
+A tuple is a collection which is ordered, indexed and unchangeable. In Python tuples are written with round brackets.
+```python
+this_tuple = ('books', 'pen', 'paper')          # Defined a tuple
 
+# Accessing Tuple Items
+print(this_tuple[2])                            # paper
+```
+
+#### Changing Tuple Values
+Tuples are immutable, which means they cant to changed once they are created.  
+If a value inside tuple needs to be changed, the tuple must be converted to a list.  
+Newly created list can be converted back to tuple after updating changes.
+```python
+desk_tuple = ("pen stand", "plant", "marker")
+desk_list = list(desk_tuple)
+desk_list[2] = "highlighter"
+desk_tuple = tuple(desk_list)
+
+print(desk_tuple[2])                            # highlighter
+```
+
+#### Creating tuple with one item
+To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+```python
+this_tuple = ("Python",)
+print(type(this_tuple))                         # tuple 
+
+# NOT a tuple
+this_tuple = ("Python")
+print(type(this_tuple))                         # str
+```
+
+#### Deleting a tuple
+Tuples are unchangeable, so you cannot remove items from it, but you can delete the tuple completely:
+```python
+this_tuple = ('books', 'pen', 'paper') 
+del this_tuple
+print(this_tuple)                               # ERROR: this_tuple is not defined
+## Third party libraries
+```
 ### Pandas
 ```shell
 $ sudo pip3 install pandas          # Installing pandas module in Ubuntu
@@ -211,6 +283,59 @@ import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 ```
+
+## Errors and Exceptions
+Program stops working on error Python raises exceptions when it encounter error.  
+To avoid this, `try-catch` blocks are used.
+
+# Exceptions
+No syntax errors found, program starts execution.  
+Errors detected during execution are called exceptions.  
+Use try: except: finally: to catch and handle the exceptions.  
+Use try: except: finally: to avoid program termination on exceptions.  
+Use try: except: else: instead of try: except: finally: for alternate flows.  
+Multiple except can be use to catch the exceptions.  
+
+```python
+a = 10 * (1/0)
+
+# Throws division by zero exception and terminate the program
+# Traceback (most recent call last):
+  File "", line 1, in 
+    a = 10 * (1/0)
+# ZeroDivisionError: division by zero
+
+# Updated Program - Valid - Try: Except: Finally
+b = 10
+try:
+    a = 10 * (1/b)
+    print( "a = {}" .format( a ) )
+except:
+    print( "Caught divide by zero - while getting a" )
+    print( "Execute on error - b must be non-zero value" )
+finally:
+    print( "Execute Always - normal and exceptional flow" )
+
+# OUTPUT
+a = 1.0
+Execute Always - normal and exceptional flow
+
+## Updated Program - Error - Try: Except: Finally
+b = 0
+try:
+    a = 10 * (1/b)
+    print( "a = {}" .format( a ) )
+except:
+    print( "Caught divide by zero - while getting a" )
+    print( "Execute on error - b must be non-zero value" )
+else:
+    print( "Alternate to exceptional flow" )
+
+# Output
+Caught divide by zero - while getting a
+Execute on error - b must be non-zero value
+Execute Always - normal and exceptional flow
+```			
 
 ## Python Snippets
 
