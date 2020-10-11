@@ -211,3 +211,43 @@ import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 ```
+
+## Python Snippets
+
+### Anagrams
+An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+```
+from collections import Counter
+def anagram(first, second):
+    return Counter(first) == Counter(second)
+anagram("abcd3", "3acdb") # True
+```
+### Memory
+This snippet can be used to check the memory usage of an object.
+```
+import sys 
+
+variable = 30 
+print(sys.getsizeof(variable)) # 24
+```
+### Print a string N times
+This snippet can be used to print a string n times without having to use loops to do it.
+```
+n = 2
+s ="Programming"
+print(s * n) # ProgrammingProgramming
+```
+### Chunk
+This method chunks a list into smaller lists of a specified size.
+```
+def chunk(list, size):
+    return [list[i:i+size] for i in range(0,len(list), size)]
+```
+### Get vowels
+This method gets vowels (‘a’, ‘e’, ‘i’, ‘o’, ‘u’) found in a string.
+```
+def get_vowels(string):
+    return [each for each in string if each in 'aeiou'] 
+get_vowels('foobar') # ['o', 'o', 'a']
+get_vowels('gym') # []
+```
