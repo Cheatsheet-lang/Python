@@ -88,7 +88,62 @@ while(i < 10):
   print("{} is less than 10".format(i))
   i += 1
 ```
-`.format()` is a type of printing.
+
+### String formatting
+There are a few ways to format a string in Python.
+
++ Using the `%` operator
+Strings can be formatted using the % operator:
+
+```python
+>>> foo = 'world'
+>>> 'Hello %s' % foo
+'Hello world'
+```
+
+To subsitute multiple instances, wrap the right hand side in a Tuple:
+
+```python
+>>> foo = 'James'
+>>> bar = 'Nancy'
+>>> 'Hi, my name is %s and this is %s' % (foo, bar)
+'Hi, my name is James and this is Nancy'
+```
+
+You can also do variable subsitutions with a dictionary:
+
+```
+>>> dict = { "name": "Mike", "country": "Canada" }
+>>> 'I am %(name)s and I am from %(country)s' % dict
+'I am Mike and I am from Canada'
+```
+
++ `.format()`
+
+Introduced in Python 3, but is available in Python 2.7+
+
+```python
+>>> 'Hello {}'.format('world')
+'Hello world'
+```
+
+Similar to the above, subsitutions can be referred by name:
+
+```python
+>>> 'Hi {name}, your total is ${total}'.format(name='Bob', total=5.50)
+'Hi Bob, your total is $5.5'
+```
+
++ f-Strings 
+
+Available in Python 3.6+. Works similar to the above, but is more powerful as arbitrary Python expressions can be embedded: 
+
+```python
+>>> a = 5
+>>> b = 10
+>>> f'Five plus ten is {a + b} and not {2 * (a + b)}.'
+'Five plus ten is 15 and not 30.'
+```
 
 ## Data Structures
 
