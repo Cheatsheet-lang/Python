@@ -376,6 +376,46 @@ def get_vowels(string):
 get_vowels('foobar') # ['o', 'o', 'a']
 get_vowels('gym') # []
 ```
+
+### Length of Last Word in a string
+This method gets the length of last word in a given string.
+```
+def lengthOfLastWord(self, s: str) -> int:
+        if(s.split()):
+            lst=s.split()
+            last=lst[-1]
+            return len(last)
+        return 0
+```
+### Valid Palindrome
+This method returns a bool value specifying whether a string is palindromic or not.
+```
+def isPalindrome(self, s: str) -> bool:
+        s = [ x.lower() for x in s if x.isalnum() ]
+        return s == s[::-1]
+```
+### Check Lowercase
+This method checks if a string is in lower case or not.
+```
+def toLowerCase(self, str):
+        """
+        :type str: str
+        :rtype: str
+        """
+        return str.lower()
+```
+### Count Negatives in a sorted Matrix
+This method returns the count of negative numbers in a sorted matrix.
+```
+def countNegatives(self, grid: List[List[int]]) -> int:
+        count = 0
+        for num in grid:
+            for n in num:
+                if n < 0:
+                    count += 1
+        return count
+```
+
 ### Write to file
 This method takes in the ``name of file`` and ``content`` then write the content into the file. If the file doesn't exist then it creates the file.
 ```python
