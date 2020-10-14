@@ -261,3 +261,10 @@ def lengthOfLastWord(self, s: str) -> int:
             return len(last)
         return 0
 ```
+### Valid Palindrome
+This method returns a bool value specifying whether a string is palindromic or not.
+```
+def isPalindrome(self, s: str) -> bool:
+        s = [ x.lower() for x in s if x.isalnum() ]
+        return s == s[::-1]
+```
