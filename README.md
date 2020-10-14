@@ -278,3 +278,14 @@ def toLowerCase(self, str):
         """
         return str.lower()
 ```
+### Count Negatives in a sorted Matrix
+This method returns the count of negative numbers in a sorted matrix.
+```
+def countNegatives(self, grid: List[List[int]]) -> int:
+        count = 0
+        for num in grid:
+            for n in num:
+                if n < 0:
+                    count += 1
+        return count
+```
