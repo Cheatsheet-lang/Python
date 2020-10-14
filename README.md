@@ -268,3 +268,13 @@ def isPalindrome(self, s: str) -> bool:
         s = [ x.lower() for x in s if x.isalnum() ]
         return s == s[::-1]
 ```
+### Check Lowercase
+This method checks if a string is in lower case or not.
+```
+def toLowerCase(self, str):
+        """
+        :type str: str
+        :rtype: str
+        """
+        return str.lower()
+```
