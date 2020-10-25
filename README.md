@@ -428,3 +428,12 @@ def write_to_file(filename, content):
     print("Failed to write to file with error: ")
     print(e)
 ```
+### Median of given array
+This method returns the median of the given list/array as an output.
+```python
+import statistics
+def median(arr):
+    print(statistics.median(arr))
+```
+
+
