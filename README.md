@@ -435,5 +435,13 @@ import statistics
 def median(arr):
     print(statistics.median(arr))
 ```
-
-
+### Even or Odd
+This function determines the given number is even or odd.
+```python
+def find_Evenodd(num):
+    
+    if(num%2==0):
+        print(num," Is an even")
+    else:
+        print(num," is an odd")
+```
