@@ -445,3 +445,12 @@ def find_Evenodd(num):
     else:
         print(num," is an odd")
 ```
+### Palindrome
+This function returns "yes" if given string is a palindrome, else "no". Palindrome is a string whose reverse is the string itself.
+```python
+def isPalindrome(s):
+    if (s == s[::-1]):
+        return "yes"
+    else:
+        return "no"
+```
