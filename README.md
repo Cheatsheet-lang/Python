@@ -1,5 +1,54 @@
 # Python Cheatsheet
 
+# Table of Content
+
+
+<!-- vim-markdown-toc GFM -->
+
+* [Main](#main)
+* [Basic and necessary commands needed to execute a well-defined python code at the command line.](#basic-and-necessary-commands-needed-to-execute-a-well-defined-python-code-at-the-command-line)
+	* [Opening a python shell.](#opening-a-python-shell)
+	* [Installing a package](#installing-a-package)
+	* [Running a python script](#running-a-python-script)
+	* [Calculating the time of execution](#calculating-the-time-of-execution)
+	* [Importing a py script](#importing-a-py-script)
+* [Getting started with the language](#getting-started-with-the-language)
+	* [Basic I/O](#basic-io)
+	* [Variables and Constants](#variables-and-constants)
+	* [Conditional Statements](#conditional-statements)
+	* [Iterative statements](#iterative-statements)
+	* [String formatting](#string-formatting)
+* [Function](#function)
+	* [Function Call](#function-call)
+* [Data Structures](#data-structures)
+	* [Lists](#lists)
+	* [Dictionaries](#dictionaries)
+	* [Tuple](#tuple)
+		* [Changing Tuple Values](#changing-tuple-values)
+		* [Creating tuple with one item](#creating-tuple-with-one-item)
+		* [Deleting a tuple](#deleting-a-tuple)
+* [Pandas](#pandas)
+* [NLTK](#nltk)
+* [Errors and Exceptions](#errors-and-exceptions)
+	* [Exceptions](#exceptions)
+* [Python Snippets](#python-snippets)
+	* [Anagrams](#anagrams)
+	* [Memory](#memory)
+	* [Print a string N times](#print-a-string-n-times)
+	* [Chunk](#chunk)
+	* [Get vowels](#get-vowels)
+	* [Length of Last Word in a string](#length-of-last-word-in-a-string)
+	* [Valid Palindrome](#valid-palindrome)
+	* [Check Lowercase](#check-lowercase)
+	* [Count Negatives in a sorted Matrix](#count-negatives-in-a-sorted-matrix)
+	* [Write to file](#write-to-file)
+	* [Median of given array](#median-of-given-array)
+	* [Even or Odd](#even-or-odd)
+	* [Palindrome](#palindrome)
+
+<!-- vim-markdown-toc -->
+
+
 ## Main
 ```python
 if __name__ == '__main__':    # If file is not imported, this will be executed
@@ -161,7 +210,7 @@ def getPerson(name, age) :
 	return person
 ```
 
-#### Function Call
+### Function Call
 Functions can be called by passing the arguments according to the declaration.
 ```python
 a = 20
@@ -260,7 +309,7 @@ del this_tuple
 print(this_tuple)                               # ERROR: this_tuple is not defined
 ## Third party libraries
 ```
-### Pandas
+## Pandas
 ```shell
 $ sudo pip3 install pandas          # Installing pandas module in Ubuntu
 ```
@@ -272,7 +321,7 @@ import pandas as pd
 <dataframe>.info()                  # Gives some information like, row and column datatypes, non-null count, and memory usage
 <dataframe>.describe()              # Provides some descriptive statistics about the numerical rows in the dataframe
 ```
-### NLTK
+## NLTK
 ```shell
 $ sudo pip3 install nltk                    # Installing nltk module in Ubuntu
 ```
@@ -288,7 +337,7 @@ nltk.download('averaged_perceptron_tagger')
 Program stops working on error Python raises exceptions when it encounter error.  
 To avoid this, `try-catch` blocks are used.
 
-# Exceptions
+### Exceptions
 No syntax errors found, program starts execution.  
 Errors detected during execution are called exceptions.  
 Use try: except: finally: to catch and handle the exceptions.  
