@@ -161,7 +161,7 @@ To subsitute multiple instances, wrap the right hand side in a Tuple:
 
 You can also do variable subsitutions with a dictionary:
 
-```
+```python
 >>> dict = { "name": "Mike", "country": "Canada" }
 >>> 'I am %(name)s and I am from %(country)s' % dict
 'I am Mike and I am from Canada'
@@ -428,7 +428,7 @@ get_vowels('gym') # []
 
 ### Length of Last Word in a string
 This method gets the length of last word in a given string.
-```
+```python
 def lengthOfLastWord(self, s: str) -> int:
         if(s.split()):
             lst=s.split()
@@ -438,14 +438,14 @@ def lengthOfLastWord(self, s: str) -> int:
 ```
 ### Valid Palindrome
 This method returns a bool value specifying whether a string is palindromic or not.
-```
+```python
 def isPalindrome(self, s: str) -> bool:
         s = [ x.lower() for x in s if x.isalnum() ]
         return s == s[::-1]
 ```
 ### Check Lowercase
 This method checks if a string is in lower case or not.
-```
+```python
 def toLowerCase(self, str):
         """
         :type str: str
@@ -455,7 +455,7 @@ def toLowerCase(self, str):
 ```
 ### Count Negatives in a sorted Matrix
 This method returns the count of negative numbers in a sorted matrix.
-```
+```python
 def countNegatives(self, grid: List[List[int]]) -> int:
         count = 0
         for num in grid:
