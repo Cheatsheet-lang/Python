@@ -20,6 +20,9 @@
 	* [String formatting](#string-formatting)
 * [Function](#function)
 	* [Function Call](#function-call)
+	* [Function as Object](#function-as-object)
+	* [Nested Function](#nested-function)
+	* [Lambda](#lambda)
 * [Data Structures](#data-structures)
 	* [Lists](#lists)
 	* [Dictionaries](#dictionaries)
@@ -225,6 +228,46 @@ print( "Sum - {} plus {}: {}" . format( a, b, c ) ) # Sum - 20 plus 50: 70
 print( "Sum - {} plus 50: {}" . format( b, d ) ) # Sum - 50 plus 50: 100
 print( "Subtraction - {} minus {}: {}" . format( b, a, e ) ) # Subtraction - 50 minus 20: 30
 print( "Person - {}" . format( p ) ) # Person - {'name': 'Joe', 'age': 75}
+```
+
+### Function as Object
+All data in a Python is represented by objects. There’s nothing particularly special about functions. They’re also just objects.
+```python
+def yell(text):                   # Define function yell
+	return text.upper() + '!'
+	
+
+>>> bark = yell                   # Declare an object "bark" that contains the function "yell"
+>>> bark('woof')                  # You could now execute the "yell" function object by calling bark
+'WOOF!'
+```
+
+### Nested Function
+Functions can be defined inside other functions. These are often called nested functions or inner functions.
+```python
+def speak(text):                          # Define function speak
+	def wisper(t):                    # Function wisper does not exist outside speak
+		return t.lower() + '...'
+	return wisper(text)
+	
+	
+>>> speak('Hello, World')
+'hello, world...'
+```
+
+## Lambda
+The lambda keyword in Python provides a shortcut for declaring small anonymous functions.
+```python
+>>> add = lambda x, y: x + y
+>>> add(5, 3)
+8
+```
+You could declare the same add function with the def keyword, but it would be slightly more verbose:
+```python
+def add(x, y):
+	return x + y
+>>> add(5, 3)
+8
 ```
 
 ## Data Structures
